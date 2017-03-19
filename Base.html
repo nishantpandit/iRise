@@ -1,0 +1,330 @@
+<script id="myCSS" type="text/css"> 
+  <style>
+     
+    .page_title {
+      font-size: 28pt;
+      color: #92D050;
+    }
+    
+    .page_subtitle {
+      font-size: 22pt;
+      color: #002776;
+    }
+    
+    h1,
+    h2,
+    h3,
+    h4,
+    p,
+    span {
+      font-family: Arial;
+    }
+    
+    ol,
+    li {
+      font-size: 13px;
+      font-family: Arial;
+      font-weight: normal;
+    }
+    
+    table {
+      border-collapse: collapse;
+      text-align: left;
+      width: 100%;
+      vertical-align: top;
+      border-collapse: collapse;
+      padding: 5px 10px;
+      border: 1px solid #000000;
+    }
+    
+    td {
+      font-family: arial;
+      font-size: 9pt;
+      padding: 5px 10px;
+      border: 1px solid #000000;
+      vertical-align: top;
+    }
+    
+    th {
+      font-family: arial;
+      font-size: 9pt;
+      padding: 5px 10px;
+      border: 1px solid #000000;
+      vertical-align: top;
+      background: #002776;
+      color: white;
+    }
+    
+    .rh {
+      background: #002776;
+      color: white;
+      width: 40%;
+      font-weight: bold;
+    }
+    
+    .title {
+      font-weight: bold;
+    }
+    
+    .desc {
+      font-size: 13px;
+      font-family: Arial;
+      font-weight: normal;
+    }
+    
+    .c2 {
+      width: 35%;
+    }
+    
+    .screenFrame {
+    width: 100%;
+    height: 500px;
+    border: 1px solid gray; 
+    }
+    
+    .comment {
+    font-size: 10pt;
+    background: #FFF2CC; 
+    padding: 6pt;
+    border-left:3pt solid #FFFFFF;
+    }
+ 
+    .reply {
+    font-size: 10pt;
+    background: #FFF2CC; 
+    padding: 6pt;
+    font-size: 8pt;
+    }
+  </style> 
+</script>
+
+<script id="StartPage_template" type="text/template">
+  <span>&nbsp;</span><br>
+  <span style="font-size: 100pt">&nbsp;</span><br>
+  <img class="logo" src="http://hansstol.totaldesign.nl/gif/deloitte.gif">
+  <br>
+  <span class="page_title">1.045 – Detailed Design Specification Document</span>
+  <br>
+  	<span style="font-size: 30pt">&nbsp;</span>
+  <br>
+  <span class="page_subtitle">1.01 – Application Registration – Register Application Version 2.1</span>
+  <br>
+  <span style="font-size: 20pt">&nbsp;</span>
+  <br>
+  <span class="page_subtitle">1/13/2017</span>
+  <br style="page-break-before: always">
+</script>
+
+<script id="Narrative_template" type="text/template">
+  <h1>{{sectionName}} </h1> 
+   {{#requirements}}
+<h3>{{title}}</h3>
+   <br style="page-break-before: always"> {{/requirements}}
+  <br style="page-break-before: always">
+</script>
+
+<script id="SaveCheckpoints_template" type="text/template">
+  <h1>{{sectionName}} </h1> 
+   {{#requirements}}
+<table class="table" style="border-collapse: collapse;" cellpadding="0" cellspacing="0">
+<tr>
+      <td class="rh">Module Name</td>
+      <td>{{Details-Module Name}}</td>
+    </tr>
+    <tr>
+      <td class="rh">Screen ID</td>
+      <td>{{Conditional Requirements-Screen ID}}</td>
+    </tr>
+    <tr>
+      <td class="rh">Screen Name</td>
+      <td>{{Conditional Requirements-Screen Name}}</td>
+    </tr>
+    <tr>
+      <td class="rh">Sub Function</td>
+      <td>{{Conditional Requirements-Sub-Function}}</td>
+    </tr>
+ <tr>
+      <td class="rh">Screen Flow</td>
+      <td>{{Conditional Requirements-Screen Flow}}</td>
+    </tr>
+ <tr>
+      <td class="rh">Save Condition</td>
+      <td>{{Conditional Requirements-Save Condition}}</td>
+    </tr>
+</table>
+   <br style="page-break-before: always"> {{/requirements}}
+  <br style="page-break-before: always">
+</script>
+
+
+<script id="BusinessScenario_template" type="text/template">
+  <h1>{{sectionName}} </h1> 
+  {{#requirements}}
+  <h3>{{title}}</h3>
+  <table class="table" style="border-collapse: collapse;" cellpadding="0" cellspacing="0">
+    <tr>
+      <td class="rh">Module Name</td>
+      <td>{{Details-Module Name}}</td>
+    </tr>
+    <tr>
+      <td class="rh">Business Scenario Title</td>
+      <td>{{Business Scenarios-Business Scenario Title}}</td>
+    </tr>
+    <tr>
+      <td class="rh">Business Scenario ID</td>
+      <td>{{owner}}</td>
+    </tr>
+    <tr>
+      <td class="rh">Dependent Business Scenario(s)</td>
+      <td>{{Business Scenarios-Dependent Business Scenarios}}</td>
+    </tr>
+    <tr>
+      <td class="rh">Requirements Reference</td>
+      <td>{{Business Scenarios-Requirements Reference}}</td>
+    </tr>
+    <tr>
+      <td class="rh">iRise Reference</td>
+      <td>{{id}} <a target="_blank" href="{{{link}}}">&#187;</a></td>
+    </tr>
+  </table>
+  <br>
+  <table class="table" style="border-collapse: collapse;">
+    <tr>
+      <th colspan="4">Main Flow Steps</th>
+    </tr>
+    <tr>
+      <th>Step #</th>
+      <th>Step Name</th>
+      <th class="c2">Process</th>
+      <th class="c2">Outcome</th>
+    </tr>
+    {{#Details-Related requirements}}
+    <tr>
+      <td>{{Main Flow Steps-Step #}}</td>
+      <td>
+        <A HREF="#{{{id}}}">{{Main Flow Steps-Step Name}}</A>
+      </td>
+      <td>{{{description}}}</td>
+      <td>{{Main Flow Steps-Outcome}}</td>
+    </tr>
+    {{/Details-Related requirements}}
+  </table>
+  <br>
+  <table class="table" style="border-collapse: collapse;">
+    <tr>
+      <th colspan="5">Related Save Checkpoints</th>
+    </tr>
+    <tr>
+      <th>Screen ID</th>
+      <th>Screen Name</th>
+      <th class="c2">Sub Function</th>
+      <th class="c2">Screen Flow</th>
+      <th class="c2">Save Condition</th>
+    </tr>
+    {{#Details-Related requirements}}
+    <tr>
+      <td>{{Conditional Requirements-Screen ID}}</td>
+      <td>
+        <A HREF="#{{{id}}}">{{Conditional Requirements-Screen Name}}</A>
+      </td>
+      <td>{{Conditional Requirements-Sub-Function}}</td>
+      <td>{{Conditional Requirements-Screen Flow}}</td>
+      <td>{{Conditional Requirements-Save Condition}}</td>
+    </tr>
+    {{/Details-Related requirements}}
+  </table>
+  <br style="page-break-before: always"> {{/requirements}}
+  <br style="page-break-before: always">
+
+</script>
+
+<script id="Business_Rules_template" type="text/template">
+  <h1>{{sectionName}}</h1>
+  <table class="table" style="border-collapse: collapse;">
+    <tr>
+      <th>Rule#</th>
+      <th>Rule</th>
+      <th>Description</th>
+      <th>Validity</th>
+    </tr>
+    {{#requirements}}
+    <tr>
+      <td>{{Business Rules-Rule#}}</td>
+      <td>
+        <h3 style="font-size: 9pt;">{{title}} <a target="_blank" href="{{{link}}}">&#187;</a></h3></td>
+      <td>{{{description}}}</td>
+      <td>{{{Business Rules-Rule Validity}}}</td>
+    </tr>
+    {{/requirements}}
+
+  </table>
+  <br style="page-break-before: always">
+</script>
+
+<script id="NonUI_template" type="text/template">
+  <h1>{{sectionName}}</h1>
+  <ol>
+    {{#requirements}}
+    <li>
+      <h3>{{{title}}} <a target="_blank" href="{{{link}}}">&#187;</a></h3> {{{description}}}
+    </li>
+    {{/requirements}}
+  </ol>
+  <br style="page-break-before: always">
+</script>
+
+<script id="MainFlow_template" type="text/template">
+  <h1>{{sectionName}}</h1> {{#requirements}}
+  <a name="{{{id}}}">
+    <h3>{{title}} <a target="_blank" href="{{{link}}}">&#187;</a></h3>
+    <div class="desc">{{{description}}}</div>
+    {{#Details-Related screens}}
+    <p class="desc">Related screens:</p>
+    <ul>
+      {{/Details-Related screens}} {{#Details-Related screens}}
+      <li>{{name}} <a target="_blank" href="{{{link}}}">&#187;</a> </li>
+      {{/Details-Related screens}} {{#Details-Related screens}}
+    </ul>
+    {{/Details-Related screens}} {{#Details-Related requirements}}
+    <p class="desc">Related requirements:</p>
+    <ul>
+      {{/Details-Related requirements}} {{#Details-Related requirements}}
+      <li>{{{title}}} <a target="_blank" href="{{{link}}}">&#187;</a></li>
+      {{/Details-Related requirements}} {{#Details-Related requirements}}
+    </ul>
+    {{/Details-Related requirements}} {{/requirements}}
+  <br style="page-break-before: always">
+</script>
+
+<script id="ScreenDesigns_template" type="text/template">
+  {{#sectionName}}
+  <h1>{{sectionName}}</h1>
+  {{/sectionName}}
+  {{#screens}}
+  	<h3>{{{name}}} <a target="_blank" href="{{{playLink}}}">&#187;</a></h3> 
+    <iframe class="screenFrame" src="{{{embedLink}}}">
+  <p>
+  <a target="_blank" href="{{{playLink}}}"><img src="http://indulgepureoriginals.com/wp-content/uploads/2013/07/placeholder.png" height="468" width="468" > 
+  </a>
+  </p>
+</iframe>
+<h4>Comments</h4>
+{{^comments}}
+<p>No comments</p>
+{{/comments}}
+
+{{#comments}}
+<p class="comment" style="border-color:{{color}}" ><b>{{createdBy}}</b> commented:<br>
+"{{text}}"
+<br><ul>
+{{#replies}}
+<li class="reply"><b>{{createdBy}}</b> replied:<br>
+"{{text}}"</li>
+{{/replies}}
+</ul>
+{{/comments}}
+</p>
+    <br style="page-break-before: always">
+  {{/screens}}
+
+</script>
