@@ -1,5 +1,5 @@
+var moduleName = "Application Registration"
 var documentConfiguration = {
-  var moduleName = "Application Registration"
   //docTitle: "Detailed Design Specification Document",
   //docSubject: "", // if blank, iRise project name is used
   //docDescription: "",
