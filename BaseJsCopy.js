@@ -26,7 +26,7 @@ var documentConfiguration = {
     page_break: "after"
   }, 
   {
-    sectionName: "Purpose",
+    sectionName: "2 Purpose",
     //includeTitle: "h1",
     getData: "requirements",
     filters: [
