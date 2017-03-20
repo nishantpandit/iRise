@@ -63,7 +63,7 @@ var documentConfiguration = {
   },
     
     {
-    sectionName: "Business Scenario List",
+    sectionName: "5 Business Scenarios",
     //includeTitle: "h1",
     getData: "requirements",
     filters: [
