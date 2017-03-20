@@ -1,4 +1,3 @@
-var moduleName = "Application Registration"
 var documentConfiguration = {
   //docTitle: "Detailed Design Specification Document",
   //docSubject: "", // if blank, iRise project name is used
@@ -25,31 +24,6 @@ var documentConfiguration = {
     includeTitle: "h1",
     page_break: "after"
   }, 
-  {
-    sectionName: "2 Purpose",
-    //includeTitle: "h1",
-    getData: "requirements",
-    filters: [
-      function(requirement) {
-        return requirement["Details-Type"] == "Purpose" && requirement["Details-Module Name"] == moduleName;
-      }
-    ],
-    template: "Purpose_template",
-    page_break: "after"
-  },
-    {
-    sectionName: "3 Narrative",
-    //includeTitle: "h1",
-    getData: "requirements",
-    filters: [
-      function(requirement) {
-        return requirement["Details-Type"] == "Narrative" && requirement["Details-Module Name"] == moduleName;
-      }
-    ],
-    template: "Narrative_template",
-    page_break: "after"
-  },
-    
     {
     sectionName: "Business Scenario List",
     //includeTitle: "h1",

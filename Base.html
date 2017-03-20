@@ -105,7 +105,7 @@
   <br>
   <span class="page_title">1.045 – Detailed Design Specification Document</span>
   <br>
-  	<span style="font-size: 30pt">&nbsp;</span>
+  <span style="font-size: 30pt">&nbsp;</span>
   <br>
   <span class="page_subtitle">1.01 – Application Registration – Register Application Version 2.1</span>
   <br>
@@ -122,7 +122,6 @@
    <br style="page-break-before: always"> {{/requirements}}
   <br style="page-break-before: always">
 </script>
-
 <script id="Narrative_template" type="text/template">
   <h1>{{sectionName}} </h1> 
    {{#requirements}}
@@ -130,40 +129,6 @@
    <br style="page-break-before: always"> {{/requirements}}
   <br style="page-break-before: always">
 </script>
-
-<script id="SaveCheckpoints_template" type="text/template">
-  <h1>{{sectionName}} </h1> 
-   {{#requirements}}
-<table class="table" style="border-collapse: collapse;" cellpadding="0" cellspacing="0">
-<tr>
-      <td class="rh">Module Name</td>
-      <td>{{Details-Module Name}}</td>
-    </tr>
-    <tr>
-      <td class="rh">Screen ID</td>
-      <td>{{Conditional Requirements-Screen ID}}</td>
-    </tr>
-    <tr>
-      <td class="rh">Screen Name</td>
-      <td>{{Conditional Requirements-Screen Name}}</td>
-    </tr>
-    <tr>
-      <td class="rh">Sub Function</td>
-      <td>{{Conditional Requirements-Sub-Function}}</td>
-    </tr>
- <tr>
-      <td class="rh">Screen Flow</td>
-      <td>{{Conditional Requirements-Screen Flow}}</td>
-    </tr>
- <tr>
-      <td class="rh">Save Condition</td>
-      <td>{{Conditional Requirements-Save Condition}}</td>
-    </tr>
-</table>
-   <br style="page-break-before: always"> {{/requirements}}
-  <br style="page-break-before: always">
-</script>
-
 
 <script id="BusinessScenario_template" type="text/template">
   <h1>{{sectionName}} </h1> 
@@ -214,30 +179,6 @@
       </td>
       <td>{{{description}}}</td>
       <td>{{Main Flow Steps-Outcome}}</td>
-    </tr>
-    {{/Details-Related requirements}}
-  </table>
-  <br>
-  <table class="table" style="border-collapse: collapse;">
-    <tr>
-      <th colspan="5">Related Save Checkpoints</th>
-    </tr>
-    <tr>
-      <th>Screen ID</th>
-      <th>Screen Name</th>
-      <th class="c2">Sub Function</th>
-      <th class="c2">Screen Flow</th>
-      <th class="c2">Save Condition</th>
-    </tr>
-    {{#Details-Related requirements}}
-    <tr>
-      <td>{{Conditional Requirements-Screen ID}}</td>
-      <td>
-        <A HREF="#{{{id}}}">{{Conditional Requirements-Screen Name}}</A>
-      </td>
-      <td>{{Conditional Requirements-Sub-Function}}</td>
-      <td>{{Conditional Requirements-Screen Flow}}</td>
-      <td>{{Conditional Requirements-Save Condition}}</td>
     </tr>
     {{/Details-Related requirements}}
   </table>
@@ -309,7 +250,7 @@
   <h1>{{sectionName}}</h1>
   {{/sectionName}}
   {{#screens}}
-  	<h3>{{{name}}} <a target="_blank" href="{{{playLink}}}">&#187;</a></h3> 
+    <h3>{{{name}}} <a target="_blank" href="{{{playLink}}}">&#187;</a></h3> 
     <iframe class="screenFrame" src="{{{embedLink}}}">
   <p>
   <a target="_blank" href="{{{playLink}}}"><img src="http://indulgepureoriginals.com/wp-content/uploads/2013/07/placeholder.png" height="468" width="468" > 
