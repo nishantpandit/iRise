@@ -37,6 +37,18 @@ var documentConfiguration = {
     template: "Purpose_template",
     page_break: "after"
   },
+  {
+    sectionName: "4.2.3 " + moduleName + " Save Checkpoints",
+    //includeTitle: "h1",
+    getData: "requirements",
+    filters: [
+      function(requirement) {
+        return requirement["Details-Type"] == "Save Checkpoint" && requirement["Details-Module Name"] == moduleName;
+      }
+    ],
+    template: "SaveCheckpoints_template",
+    page_break: "after"
+  },
     {
     sectionName: "3 Narrative",
     //includeTitle: "h1",

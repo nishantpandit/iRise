@@ -122,6 +122,31 @@
    <br style="page-break-before: always"> {{/requirements}}
   <br style="page-break-before: always">
 </script>
+
+
+<script id="SaveCheckpoints_template" type="text/template">
+  <h1>{{sectionName}} </h1> 
+  <table class="table" style="border-collapse: collapse;">
+  <tr>
+      <th>Screen ID</th>
+      <th class="c2">Screen Name</th>
+      <th class="c2">Sub Function</th>
+      <th class="c2">Screen Flow</th>
+      <th class="c2">Save Condition</th>
+    </tr>
+    {{#requirements}}
+    <tr>
+    <td>{{Save Checkpoint Category-Screen ID}}</td>
+    <td>{{Save Checkpoint Category-Screen Name}}</td>
+    <td>{{Save Checkpoint Category-Sub-Function}}</td>
+    <td>{{Save Checkpoint Category-Screen Flow}}</td>
+    <td>{{Save Checkpoint Category-Save Condition}}</td>
+    </tr>
+    {{/requirements}}
+  </table>
+  <br style="page-break-before: always">
+</script>
+
 <script id="Narrative_template" type="text/template">
   <h1>{{sectionName}} </h1> 
    {{#requirements}}
