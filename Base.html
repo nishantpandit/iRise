@@ -118,7 +118,7 @@
 <script id="Purpose_template" type="text/template">
   <h1>{{sectionName}} </h1> 
    {{#requirements}}
-<h3>{{title}}</h3>
+<h3>{{{description}}}</h3>
    <br style="page-break-before: always"> {{/requirements}}
   <br style="page-break-before: always">
 </script>
@@ -150,7 +150,7 @@
 <script id="Narrative_template" type="text/template">
   <h1>{{sectionName}} </h1> 
    {{#requirements}}
-<h3>{{title}}</h3>
+<h3>{{{description}}}</h3>
    <br style="page-break-before: always"> {{/requirements}}
   <br style="page-break-before: always">
 </script>
@@ -217,11 +217,10 @@
     </tr>
     {{#requirements}}
     <tr>
-      <td>{{Business Rules-Rule#}}</td>
-      <td>
-        <h3 style="font-size: 9pt;">{{title}} <a target="_blank" href="{{{link}}}">&#187;</a></h3></td>
-      <td>{{{description}}}</td>
-      <td>{{{Business Rules-Rule Validity}}}</td>
+      <td>{{Business Rule Category-Rule #}}</td>
+      <td>{{Business Rule Category-Rule}}</td>
+      <td>{{Business Rule Category-Rule Description}}</td>
+      <td>{{Business Rule Category-Rule Validity}}</td>
     </tr>
     {{/requirements}}
 
@@ -240,8 +239,10 @@
   </ol>
   <br style="page-break-before: always">
 </script>
-
-<script id="MainFlow_template" type="text/template">
+<script id="ReferencedDocuments_template" type="text/template">
+  <h1>{{sectionName}}</h1>
+</script>
+<!--<script id="MainFlow_template" type="text/template">
   <h1>{{sectionName}}</h1> {{#requirements}}
   <a name="{{{id}}}">
     <h3>{{title}} <a target="_blank" href="{{{link}}}">&#187;</a></h3>
@@ -262,7 +263,9 @@
     </ul>
     {{/Details-Related requirements}} {{/requirements}}
   <br style="page-break-before: always">
-</script>
+</script> -->
+<script id="MainFlow_template" type="text/template">
+ </script>
 
 <script id="ScreenDesigns_template" type="text/template">
   {{#sectionName}}

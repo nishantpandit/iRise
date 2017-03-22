@@ -75,7 +75,7 @@ var documentConfiguration = {
   },*/
     
    {
-    sectionName: "3 Narrative",
+    sectionName: "4.1 Narrative",
     //includeTitle: "h1",
     getData: "requirements",
     filters: [
@@ -93,7 +93,7 @@ var documentConfiguration = {
     getData: "requirements",
     filters: [
       function(requirement) {
-        return requirement["Details-Type"] == "Business Scenario";
+        return requirement["Details-Type"] == "Business Scenario" && requirement["Details-Module Name"] == moduleName;;
       }
     ],
     template: "BusinessScenario_template",
@@ -117,7 +117,7 @@ var documentConfiguration = {
     getData: "requirements",
     filters: [
       function(requirement) {
-        return requirement["Details-Type"] == "Business Rule";
+        return requirement["Details-Type"] == "Business Rule" && requirement["Details-Module Name"] == moduleName;
       }
     ],
     template: "Business_Rules_template",
@@ -129,7 +129,7 @@ var documentConfiguration = {
     getData: "requirements",
     filters: [
       function(requirement) {
-        return requirement["Details-Type"] == "Non-UI Content";
+        return requirement["Details-Type"] == "Non-UI Content" && requirement["Details-Module Name"] == moduleName;;
       }
     ],
     template: "NonUI_template",
@@ -141,22 +141,22 @@ var documentConfiguration = {
     getData: "requirements",
     filters: [
       function(requirement) {
-        return requirement["Details-Type"] == "Main Flow Step";
+        return requirement["Details-Type"] == "Main Flow Step" && requirement["Details-Module Name"] == moduleName;;
       }
     ],
     template: "MainFlow_template",
     page_break: "after"
   }, 
     {
-    sectionName: "Reference Tables",
+    sectionName: "8 Referenced Documents",
     //includeName: "h1",
     getData: "requirements",
     filters: [
       function(requirement) {
-        return requirement["Details-Type"] == "Reference Table";
+        return requirement["Details-Type"] == "Referenced Document" && requirement["Details-Module Name"] == moduleName;;
       }
     ],
-    template: "NonUI_template",
-    page_break: ""
+    template: "ReferencedDocuments_template",
+    page_break: "after"
   }]
 };
