@@ -37,6 +37,18 @@ var documentConfiguration = {
     template: "Purpose_template",
     page_break: "after"
   },
+  /*{
+    sectionName: "3 Scope",
+    //includeTitle: "h1",
+    getData: "requirements",
+    filters: [
+      function(requirement) {
+        return requirement["Details-Type"] == "Scope" && requirement["Details-Module Name"] == moduleName;
+      }
+    ],
+    template: "Scope_template",
+    page_break: "after"
+  },*/
   {
     sectionName: "4.2.3 " + moduleName + " Save Checkpoints",
     //includeTitle: "h1",
@@ -88,7 +100,7 @@ var documentConfiguration = {
     page_break: "after"
   }, 
     {
-    sectionName: "Screen Designs",
+    sectionName: "6 Screen Design",
     //includeTitle: "h1",
     getData: "screens",
     filters: [
@@ -112,7 +124,7 @@ var documentConfiguration = {
     page_break: ""
   }, 
     {
-    sectionName: "Non-UI Content",
+    sectionName: "7 Non-UI Content",
     //includeName: "h1",
     getData: "requirements",
     filters: [
