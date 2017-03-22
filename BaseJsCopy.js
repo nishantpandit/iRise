@@ -49,6 +49,18 @@ var documentConfiguration = {
     template: "SaveCheckpoints_template",
     page_break: "after"
   },
+   {
+    sectionName: "4.2.4 Screen Display Conditions",
+    //includeTitle: "h1",
+    getData: "requirements",
+    filters: [
+      function(requirement) {
+        return requirement["Details-Type"] == "Screen Display Condition" && requirement["Details-Module Name"] == moduleName;
+      }
+    ],
+    template: "ScreenDisplayCondition_template",
+    page_break: "after"
+  },
     {
     sectionName: "3 Narrative",
     //includeTitle: "h1",
@@ -68,7 +80,7 @@ var documentConfiguration = {
     getData: "requirements",
     filters: [
       function(requirement) {
-        return requirement["Details-Type"] == "Business Scenario";
+        return requirement["Details-Type"] == "Business Scenario" && requirement["Details-Module Name"] == moduleName;;
       }
     ],
     template: "BusinessScenario_template",
@@ -111,12 +123,12 @@ var documentConfiguration = {
     page_break: "after"
   }, 
     {
-    sectionName: "Main Flows",
+    sectionName: "Main Flow Steps",
     //includeName: "h1",
     getData: "requirements",
     filters: [
       function(requirement) {
-        return requirement["Details-Type"] == "Main Flow Step";
+        return requirement["Details-Type"] == "Main Flow Step" && requirement["Details-Module Name"] == moduleName;;
       }
     ],
     template: "MainFlow_template",
