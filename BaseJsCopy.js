@@ -117,7 +117,7 @@ var documentConfiguration = {
     getData: "requirements",
     filters: [
       function(requirement) {
-        return requirement["Details-Type"] == "Business Rule";
+        return requirement["Details-Type"] == "Business Rule" && requirement["Details-Module Name"] == moduleName;
       }
     ],
     template: "Business_Rules_template",
