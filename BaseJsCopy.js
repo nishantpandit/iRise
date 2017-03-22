@@ -61,7 +61,7 @@ var documentConfiguration = {
     template: "SaveCheckpoints_template",
     page_break: "after"
   },
- /* {
+  {
     sectionName: "4.2.4 Screen Display Conditions",
     //includeTitle: "h1",
     getData: "requirements",
@@ -72,7 +72,7 @@ var documentConfiguration = {
     ],
     template: "ScreenDisplay_template",
     page_break: "after"
-  },*/
+  },
     
    {
     sectionName: "4.1 Narrative",
