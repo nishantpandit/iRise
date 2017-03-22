@@ -49,22 +49,20 @@ var documentConfiguration = {
     template: "SaveCheckpoints_template",
     page_break: "after"
   },
-  {
+ /* {
     sectionName: "4.2.4 Screen Display Conditions",
     //includeTitle: "h1",
     getData: "requirements",
     filters: [
       function(requirement) {
-        return requirement["Details-Type"] == "Save Checkpoint" && requirement["Details-Module Name"] == moduleName;
+        return requirement["Details-Type"] == "Screen Display Condition" && requirement["Details-Module Name"] == moduleName;
       }
     ],
-    template: "SaveCheckpoints_template",
+    template: "ScreenDisplay_template",
     page_break: "after"
-  },
+  },*/
     
-
-
-    {
+   {
     sectionName: "3 Narrative",
     //includeTitle: "h1",
     getData: "requirements",
