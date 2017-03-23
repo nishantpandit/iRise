@@ -305,7 +305,13 @@
   <br style="page-break-before: always">
 </script>
 <script id="ReferencedDocuments_template" type="text/template">
+<hr>
   <h1>{{sectionName}}</h1>
+    <hr>
+   {{#requirements}}
+<h3>{{{description}}}</h3>
+   <br style="page-break-before: always"> {{/requirements}}
+  <br style="page-break-before: always">
 </script>
 <!--<script id="MainFlow_template" type="text/template">
   <h1>{{sectionName}}</h1> {{#requirements}}
