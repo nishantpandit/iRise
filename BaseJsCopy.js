@@ -49,6 +49,21 @@ var documentConfiguration = {
     template: "Scope_template",
     page_break: "after"
   },
+  
+
+  {
+    sectionName: "4.1 Narrative",
+    //includeTitle: "h1",
+    getData: "requirements",
+    filters: [
+      function(requirement) {
+        return requirement["Details-Type"] == "Narrative" && requirement["Details-Module Name"] == moduleName;
+      }
+    ],
+    template: "Narrative_template",
+    page_break: "after"
+  },
+
   {
     sectionName: "4.2.3 " + moduleName + " Save Checkpoints",
     //includeTitle: "h1",
@@ -73,6 +88,7 @@ var documentConfiguration = {
     template: "ScreenDisplay_template",
     page_break: "after"
   },
+    
 
   {
     sectionName: "4.3 Assumptions",
@@ -87,19 +103,7 @@ var documentConfiguration = {
     page_break: "after"
   },
     
-   {
-    sectionName: "4.1 Narrative",
-    //includeTitle: "h1",
-    getData: "requirements",
-    filters: [
-      function(requirement) {
-        return requirement["Details-Type"] == "Narrative" && requirement["Details-Module Name"] == moduleName;
-      }
-    ],
-    template: "Narrative_template",
-    page_break: "after"
-  },
-    
+  
     {
     sectionName: "5 Business Scenarios",
     //includeTitle: "h1",
