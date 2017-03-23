@@ -108,6 +108,8 @@
   </style> 
 </script>
 
+
+
 <script id="StartPage_template" type="text/template">
   <span>&nbsp;</span><br>
   <span style="font-size: 100pt">&nbsp;</span><br>
@@ -121,9 +123,18 @@
   <br>
   <span style="font-size: 20pt">&nbsp;</span>
   <br>
-  <span class="page_subtitle">1/13/2017</span>
+  <span class="page_subtitle"><p id="date"></p></span>
   <br style="page-break-before: always">
+  <script>
+    n =  new Date();
+    y = n.getFullYear();
+    m = n.getMonth() + 1;
+    d = n.getDate();
+    document.getElementById("date").innerHTML = m + "/" + d + "/" + y;
 </script>
+</script>
+
+
 
 <script id="Purpose_template" type="text/template">
 <hr>
