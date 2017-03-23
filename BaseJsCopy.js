@@ -76,7 +76,7 @@ var documentConfiguration = {
 
   {
     sectionName: "4.3 Assumptions",
-    //includeTitle: "h1",
+    includeTitle: "h1",
     getData: "requirements",
     filters: [
       function(requirement) {
