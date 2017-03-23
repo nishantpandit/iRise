@@ -125,7 +125,7 @@ var documentConfiguration = {
     page_break: "after"
   }, 
     {
-    sectionName: "Business Rules",
+    sectionName: "7.7 Business Rules",
     //includeTitle: "h1",
     getData: "requirements",
     filters: [
@@ -142,7 +142,7 @@ var documentConfiguration = {
     getData: "requirements",
     filters: [
       function(requirement) {
-        return requirement["Details-Type"] == "Non-UI Content" && requirement["Details-Module Name"] == moduleName;;
+        return requirement["Details-Type"] == "Non UI Content" && requirement["Details-Module Name"] == moduleName;;
       }
     ],
     template: "NonUI_template",

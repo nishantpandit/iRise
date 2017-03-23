@@ -124,7 +124,9 @@
 </script>
 
 <script id="Purpose_template" type="text/template">
+<hr>
   <h1>{{sectionName}} </h1> 
+  <hr>
    {{#requirements}}
 <h3>{{{description}}}</h3>
    <br style="page-break-before: always"> {{/requirements}}
@@ -158,7 +160,9 @@
 </script>
 
 <script id="ScreenDisplay_template" type="text/template">
+<hr>
   <h1>{{sectionName}} </h1> 
+  <hr>
   <table class="table" style="border-collapse: collapse;">
   <tr>
       <th>Screen ID</th>
@@ -181,7 +185,9 @@
 </script>
 
 <script id="Assumption_template" type="text/template">
+<hr>
   <h1>{{sectionName}} </h1> 
+  <hr>
    {{#requirements}}
 <h3>{{{description}}}</h3>
    <br style="page-break-before: always"> {{/requirements}}
@@ -189,7 +195,9 @@
 </script>
 
 <script id="Narrative_template" type="text/template">
+<hr>
   <h1>{{sectionName}} </h1> 
+  <hr>
    {{#requirements}}
 <h3>{{{description}}}</h3>
    <br style="page-break-before: always"> {{/requirements}}
@@ -197,7 +205,9 @@
 </script>
 
 <script id="BusinessScenario_template" type="text/template">
+<hr>
   <h1>{{sectionName}} </h1> 
+  <hr>
   {{#requirements}}
   <h3>{{title}}</h3>
   <table class="table" style="border-collapse: collapse;" cellpadding="0" cellspacing="0">
@@ -247,8 +257,24 @@
 
 </script>
 
-<script id="Business_Rules_template" type="text/template">
+<script id="NonUI_template" type="text/template">
+<hr>
   <h1>{{sectionName}}</h1>
+  <hr>
+  <ol>
+    {{#requirements}}
+    <li>
+      <h3>{{{title}}} <a target="_blank" href="{{{link}}}">&#187;</a></h3> {{{description}}}
+    </li>
+    {{/requirements}}
+  </ol>
+  <br style="page-break-before: always">
+</script>
+
+<script id="Business_Rules_template" type="text/template">
+<hr>
+  <h1>{{sectionName}}</h1>
+  <hr>
   <table class="table" style="border-collapse: collapse;">
     <tr>
       <th>Rule#</th>
@@ -269,17 +295,6 @@
   <br style="page-break-before: always">
 </script>
 
-<script id="NonUI_template" type="text/template">
-  <h1>{{sectionName}}</h1>
-  <ol>
-    {{#requirements}}
-    <li>
-      <h3>{{{title}}} <a target="_blank" href="{{{link}}}">&#187;</a></h3> {{{description}}}
-    </li>
-    {{/requirements}}
-  </ol>
-  <br style="page-break-before: always">
-</script>
 <script id="ReferencedDocuments_template" type="text/template">
   <h1>{{sectionName}}</h1>
 </script>
@@ -310,7 +325,9 @@
 
 <script id="ScreenDesigns_template" type="text/template">
   {{#sectionName}}
+  <hr>
   <h1>{{sectionName}}</h1>
+  <hr>
   {{/sectionName}}
   {{#screens}}
     <h3>{{{name}}} <a target="_blank" href="{{{playLink}}}">&#187;</a></h3> 
