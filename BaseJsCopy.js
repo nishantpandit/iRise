@@ -63,6 +63,18 @@ var documentConfiguration = {
     template: "Narrative_template",
     page_break: "after"
   },
+ {
+    sectionName: "4.2 Screen Flow",
+    //includeTitle: "h1",
+    getData: "requirements",
+    filters: [
+      function(requirement) {
+        return requirement["Details-Type"] == "Screen Flow Summary" && requirement["Details-Module Name"] == moduleName;
+      }
+    ],
+    template: "ScreenFlowSummary_template",
+    page_break: "after"
+  },
 
   {
     sectionName: "4.2.3 " + moduleName + " Save Checkpoints",
