@@ -49,6 +49,18 @@ var documentConfiguration = {
     template: "Scope_template",
     page_break: "after"
   },
+  {
+    sectionName: "3.2 Track",
+    //includeTitle: "h1",
+    getData: "requirements",
+    filters: [
+      function(requirement) {
+        return requirement["Details-Type"] == "Track" && requirement["Details-Module Name"] == moduleName;
+      }
+    ],
+    template: "Track_template",
+    page_break: "after"
+  },
   
 
   {
