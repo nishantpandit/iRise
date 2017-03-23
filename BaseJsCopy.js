@@ -202,7 +202,7 @@ var documentConfiguration = {
     page_break: "after"
   },
   {
-    sectionName: "9 Field Descriptions",
+    sectionName: "9 Data Element Details",
     //includeName: "h1",
     getData: "requirements",
     filters: [
