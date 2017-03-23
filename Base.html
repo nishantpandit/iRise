@@ -256,21 +256,6 @@
   <br style="page-break-before: always">
 
 </script>
-
-<script id="NonUI_template" type="text/template">
-<hr>
-  <h1>{{sectionName}}</h1>
-  <hr>
-  <ol>
-    {{#requirements}}
-    <li>
-      <h3>{{{title}}} <a target="_blank" href="{{{link}}}">&#187;</a></h3> {{{description}}}
-    </li>
-    {{/requirements}}
-  </ol>
-  <br style="page-break-before: always">
-</script>
-
 <script id="Business_Rules_template" type="text/template">
 <hr>
   <h1>{{sectionName}}</h1>
@@ -295,6 +280,20 @@
   <br style="page-break-before: always">
 </script>
 
+
+<script id="NonUI_template" type="text/template">
+<hr>
+  <h1>{{sectionName}}</h1>
+  <hr>
+  <ol>
+    {{#requirements}}
+    <li>
+      <h3>{{{title}}} <a target="_blank" href="{{{link}}}">&#187;</a></h3> {{{description}}}
+    </li>
+    {{/requirements}}
+  </ol>
+  <br style="page-break-before: always">
+</script>
 <script id="ReferencedDocuments_template" type="text/template">
   <h1>{{sectionName}}</h1>
 </script>

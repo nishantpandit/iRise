@@ -124,18 +124,7 @@ var documentConfiguration = {
     template: "ScreenDesigns_template",
     page_break: "after"
   }, 
-    {
-    sectionName: "7.7 Business Rules",
-    //includeTitle: "h1",
-    getData: "requirements",
-    filters: [
-      function(requirement) {
-        return requirement["Details-Type"] == "Business Rule" && requirement["Details-Module Name"] == moduleName;
-      }
-    ],
-    template: "Business_Rules_template",
-    page_break: ""
-  }, 
+   
     {
     sectionName: "7 Non-UI Content",
     //includeName: "h1",
@@ -147,6 +136,18 @@ var documentConfiguration = {
     ],
     template: "NonUI_template",
     page_break: "after"
+  }, 
+   {
+    sectionName: "7.1 Business Rules",
+    //includeTitle: "h1",
+    getData: "requirements",
+    filters: [
+      function(requirement) {
+        return requirement["Details-Type"] == "Business Rule" && requirement["Details-Module Name"] == moduleName;
+      }
+    ],
+    template: "Business_Rules_template",
+    page_break: ""
   }, 
     {
     sectionName: "Main Flows",
