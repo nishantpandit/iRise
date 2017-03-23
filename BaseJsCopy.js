@@ -73,6 +73,19 @@ var documentConfiguration = {
     template: "ScreenDisplay_template",
     page_break: "after"
   },
+
+  {
+    sectionName: "4.3 Assumptions",
+    //includeTitle: "h1",
+    getData: "requirements",
+    filters: [
+      function(requirement) {
+        return requirement["Details-Type"] == "Assumption" && requirement["Details-Module Name"] == moduleName;
+      }
+    ],
+    template: "Assumption_template",
+    page_break: "after"
+  },
     
    {
     sectionName: "4.1 Narrative",
