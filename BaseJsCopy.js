@@ -188,5 +188,17 @@ var documentConfiguration = {
     ],
     template: "ReferencedDocuments_template",
     page_break: "after"
+  },
+  {
+    sectionName: "9 Field Descriptions",
+    //includeName: "h1",
+    getData: "requirements",
+    filters: [
+      function(requirement) {
+        return requirement["Details-Type"] == "Field Description" && requirement["Details-Module Name"] == moduleName;;
+      }
+    ],
+    template: "FieldDescription_template",
+    page_break: "after"
   }]
 };
