@@ -37,7 +37,7 @@ var documentConfiguration = {
     template: "Purpose_template",
     page_break: "after"
   },
-  /*{
+  {
     sectionName: "3 Scope",
     //includeTitle: "h1",
     getData: "requirements",
@@ -48,7 +48,7 @@ var documentConfiguration = {
     ],
     template: "Scope_template",
     page_break: "after"
-  },*/
+  },
   {
     sectionName: "4.2.3 " + moduleName + " Save Checkpoints",
     //includeTitle: "h1",
